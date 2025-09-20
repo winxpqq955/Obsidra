@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 @Plugin(
         id = "obsidra-velocity",
         name = "Obsidra",
-        version = "N/A"
+        version = "1.0.0"
 )
 public class ObsidraVelocityImpl {
 
