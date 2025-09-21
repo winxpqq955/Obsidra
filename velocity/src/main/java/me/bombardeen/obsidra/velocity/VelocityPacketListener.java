@@ -35,7 +35,7 @@ public class VelocityPacketListener implements PacketListener {
     public void onInstanceStart(final InstanceStartPacket packet) {
         ServerInfo serverInfo = new ServerInfo(
                 packet.instance().getInstanceType().getMinimal() + "-" + packet.instance().getUniqueId().toString().split("-")[0],
-                packet.instance().getAddress()
+                new InetSocketAddress(packet.instance().getAddress(), packet.instance().getPort())
         );
 
         RegisteredServer server = proxyServer.registerServer(serverInfo);

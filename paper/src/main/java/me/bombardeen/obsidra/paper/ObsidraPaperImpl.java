@@ -10,7 +10,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
 import java.util.UUID;
 
 /**
@@ -45,7 +44,8 @@ public class ObsidraPaperImpl extends JavaPlugin {
         this.properties = new InstanceProperties(
                 UUID.randomUUID(),
                 InstanceTypeEnum.valueOf(getConfig().getString("CONFIG.INSTANCE-TYPE")),
-                new InetSocketAddress(ip, port)
+                ip,
+                port
         );
 
         common.getNatsHandler().sendPacket(new InstanceStartPacket(properties));

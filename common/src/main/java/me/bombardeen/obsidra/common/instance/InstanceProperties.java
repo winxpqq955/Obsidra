@@ -18,5 +18,6 @@ import java.util.UUID;
 public class InstanceProperties {
     private UUID uniqueId;
     private InstanceTypeEnum instanceType;
-    private InetSocketAddress address;
+    private String address;
+    private int port;
 }
