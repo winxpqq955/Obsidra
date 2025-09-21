@@ -1,5 +1,5 @@
 # Obsidra
-A simple but efficient tool to register Velocity servers when Paper servers start, coordinated via NATS.
+A simple but efficient tool to register Paper server instances on Velocity when they start, coordinated via NATS.
 
 Docker templates and example setups might be provided in the future.
 
