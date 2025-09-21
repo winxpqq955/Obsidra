@@ -1,3 +1,6 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.gradle.kotlin.dsl.withType
+
 plugins {
     id("java")
     id("de.eldoria.plugin-yml.paper") version "0.8.0"
@@ -25,12 +28,16 @@ dependencies {
 }
 
 paper {
-    name = "${project.name}-paper"
-    version = "${project.version}"
-    description = "${project.description}"
+    name = "${rootProject.name}-paper"
+    version = "${rootProject.version}"
+    description = "${rootProject.description}"
     author = "jsexp"
 
     apiVersion = "1.20"
     main = "me.bombardeen.obsidra.paper.ObsidraPaperImpl"
     generateLibrariesJson = true
+}
+
+tasks.withType<ShadowJar> {
+    archiveFileName.set("${rootProject.name}-paper-${rootProject.version}.jar")
 }

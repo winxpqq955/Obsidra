@@ -22,6 +22,8 @@ dependencies {
 }
 
 tasks.withType<ShadowJar> {
+    archiveFileName.set("${rootProject.name}-common-${rootProject.version}.jar")
+
     relocate("org.jspecify", "me.bombardeen.obsidra.shaded.jspecify")
     relocate("org.bouncycastle", "me.bombardeen.obsidra.shaded.bouncycastle")
     relocate("io.nats", "me.bombardeen.obsidra.shaded.nats")

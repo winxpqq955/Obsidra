@@ -1,3 +1,5 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     id("java")
     id("com.gradleup.shadow") version "9.1.0"
@@ -22,4 +24,8 @@ dependencies {
     implementation(fileTree("libs") {
         include("**/*.jar")
     })
+}
+
+tasks.withType<ShadowJar> {
+    archiveFileName.set("${rootProject.name}-velocity-${rootProject.version}.jar")
 }
