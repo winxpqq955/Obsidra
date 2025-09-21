@@ -4,4 +4,4 @@ plugins {
 }
 
 group = "me.bombardeen.obsidra"
-version = "1.0.0"
+version = "1.0.0-BUGFIX"
