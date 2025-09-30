@@ -1,4 +1,4 @@
 rootProject.name = "Obsidra"
-include("common")
-include("paper")
-include("velocity")
+include("Obsidra-common")
+include("Obsidra-paper")
+include("Obsidra-velocity")
